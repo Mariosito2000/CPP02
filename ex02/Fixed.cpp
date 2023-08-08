@@ -22,13 +22,13 @@ Fixed::Fixed(const Fixed &a)
 Fixed::Fixed(const int i)
 {
 	std::cout << "Int constructor called\n";
-	this->value = i << fractional_bits;
+	this->value = i << fractionalBits;
 }
 
 Fixed::Fixed(const float f)
 {
 	std::cout << "Float constructor called\n";
-	this->value = (int)roundf(f * (1 << fractional_bits));
+	this->value = (int)roundf(f * (1 << fractionalBits));
 }
 
 /*---STATIC FUNCTIONS---*/
@@ -80,13 +80,13 @@ void	Fixed::setRawBits(int const Raw)
 float	Fixed::toFloat() const
 {
 	float	R;
-	R = (float)this->value / (1 << fractional_bits);
+	R = (float)this->value / (1 << fractionalBits);
 	return (R);
 }
 
 int		Fixed::toInt() const
 {
-	return (this->value >> fractional_bits);
+	return (this->value >> fractionalBits);
 }
 
 /*---OPERATORS---*/
