@@ -13,7 +13,7 @@ bool	bsp( Point const a, Point const b, Point const c, Point const point)
 	wTwo = (point.getY() - a.getY() - (wOne * (b.getY() - a.getY())))
 		/ (c.getY() - a.getY());
 
-	if (wTwo >= 0 && wOne >= 0 && wTwo + wOne <= 1)
+	if (wTwo > 0 && wOne > 0 && wTwo + wOne < 1)
 		return (true);
 	return (false);
 }

@@ -38,6 +38,7 @@ const Fixed &	Point::getY() const
 
 const Point &	Point::operator = (const Point &a)
 {
-	//this = a;
+	const_cast<Fixed &>(this->x)=a.getX();
+	const_cast<Fixed &>(this->y)=a.getY();
 	return (*this);
 }
