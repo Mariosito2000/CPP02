@@ -20,7 +20,7 @@ DEPS	=	$(OBJS:.o=.d)
 
 NAME	=	BSP_test
 
-CC		=	g++
+CC		=	c++
 
 #DEBUG	=	-g3
 
